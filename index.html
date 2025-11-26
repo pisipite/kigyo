@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Monitor Társasjáték</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="setup-screen" class="modal active">
+        <div class="modal-content">
+            <h1>K-Monitor Társasjáték</h1>
+            <p>Hány játékos szeretne játszani? (1-6)</p>
+            <input type="number" id="player-count" min="1" max="6" value="2">
+            <button onclick="setupPlayersInput()">Tovább</button>
+            <div id="player-names-container"></div>
+            <button id="start-game-btn" style="display:none;" onclick="startGame()">Játék indítása</button>
+        </div>
+    </div>
+
+    <div id="game-container">
+        <div id="board-wrapper">
+            <img src="board.jpg" alt="Játéktábla" id="board-img">
+            </div>
+    </div>
+
+    <div id="controls">
+        <div id="current-player-info">Játékos info...</div>
+        <button id="roll-btn" onclick="rollDice()">Dobás!</button>
+        <div id="dice-display">🎲</div>
+    </div>
+
+    <div id="action-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title">Esemény!</h2>
+            <p id="modal-text">Leírás...</p>
+            <button onclick="closeModal()">Rendben</button>
+        </div>
+    </div>
+
+    <div id="winner-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="winner-name">Győztes!</h2>
+            <p>Gratulálunk, megnyerted a játékot!</p>
+            <button onclick="location.reload()">Új játék</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
