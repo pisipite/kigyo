@@ -3,47 +3,47 @@
 // A mezők koordinátái (Top, Left százalékban a kép bal felső sarkához képest)
 // Ezt a tömböt az Ön által megadott adatok alapján hagytam benne.
 const coordinates = [
-    { top: 110, left: 7 },  // 0. Start mező
-    { top: 110, left: 18 }, // 1
-    { top: 110, left: 23 }, // 2
-    { top: 110, left: 30 }, // 3
-    { top: 110, left: 37 }, // 4
-    { top: 110, left: 44 }, // 5 (Létra)
-    { top: 110, left: 50 }, // 6
-    { top: 110, left: 56 }, // 7
-    { top: 110, left: 63 }, // 8
-    { top: 110, left: 70 }, // 9 (Híd alatt)
-    { top: 110, left: 75 }, // 10 (Létra)
-    { top: 110, left: 82 }, // 11
-    { top: 100, left: 87 }, // 12
-    { top: 95, left: 88 }, // 13
-    { top: 85, left: 89 }, // 14
-    { top: 80, left: 88 }, // 15 (Csúszda le)
-    { top: 75, left: 86 }, // 16
-    { top: 65, left: 83 }, // 17
-    { top: 65, left: 75 }, // 18
-    { top: 65, left: 70 }, // 19
-    { top: 65, left: 63 }, // 20
-    { top: 65, left: 56 }, // 21 (Létra) - hibás
-    { top: 65, left: 50 }, // 22 (Csúszda le) - hibás
-    { top: 65, left: 44 }, // 23
-    { top: 65, left: 37 }, // 24
-    { top: 65, left: 30 }, // 25
-    { top: 65, left: 23 }, // 26
-    { top: 65, left: 18 }, // 27
-    { top: 65, left: 12 }, // 28
-    { top: 58, left: 12 }, // 29
-    { top: 18, left: 15 }, // 30
-    { top: 18, left: 18 }, // 31
-    { top: 18, left: 23 }, // 32
-    { top: 18, left: 30 }, // 33
-    { top: 18, left: 37 }, // 34 (Kígyó feje)
-    { top: 18, left: 44 }, // 35
-    { top: 18, left: 50 }, // 36
-    { top: 18, left: 56 }, // 37
-    { top: 18, left: 63 }, // 38
-    { top: 18, left: 70 }, // 39
-    { top: 18, left: 75 }  // 40 (Cél)
+    { top: 80, left: 10 },  // 0. Start mező
+    { top: 80, left: 17 }, // 1
+    { top: 80, left: 24 }, // 2
+    { top: 80, left: 30 }, // 3
+    { top: 80, left: 37 }, // 4
+    { top: 80, left: 44 }, // 5 (Létra)
+    { top: 80, left: 51 }, // 6
+    { top: 80, left: 57 }, // 7
+    { top: 80, left: 63 }, // 8
+    { top: 80, left: 70 }, // 9 
+    { top: 80, left: 76 }, // 10 (Létra)
+    { top: 76, left: 81 }, // 11
+    { top: 70, left: 83 }, // 12
+    { top: 69, left: 85 }, // 13
+    { top: 62, left: 86.5 }, // 14
+    { top: 55, left: 85 }, // 15 (Csúszda le)
+    { top: 48, left: 81 }, // 16
+    { top: 41, left: 76 }, // 17
+    { top: 34, left: 70 }, // 18
+    { top: 34, left: 64 }, // 19
+    { top: 34, left: 58 }, // 20
+    { top: 34, left: 52 }, // 21 
+    { top: 34, left: 46 }, // 22 
+    { top: 34, left: 40 }, // 23
+    { top: 34, left: 34 }, // 24
+    { top: 34, left: 28 }, // 25
+    { top: 34, left: 22 }, // 26
+    { top: 34, left: 16 }, // 27
+    { top: 34, left: 10 }, // 28
+    { top: 27, left: 7 },  // 29
+    { top: 11, left: 10 }, // 30
+    { top: 11, left: 16 }, // 31
+    { top: 11, left: 22 }, // 32
+    { top: 11, left: 28 }, // 33
+    { top: 11, left: 34 }, // 34 
+    { top: 11, left: 40 }, // 35
+    { top: 11, left: 46 }, // 36
+    { top: 11, left: 52 }, // 37
+    { top: 11, left: 58 }, // 38
+    { top: 11, left: 64 }, // 39
+    { top: 11, left: 70 }  // 40 (Cél)
 ];
 
 // Szabályok és szövegek (A csatolt leírás alapján)
@@ -182,6 +182,9 @@ function createPlayerPin(color, index) {
     const pin = document.createElement('div');
     pin.classList.add('player-pin');
     pin.style.backgroundColor = color;
+    // Megjegyzés: A CSS már kezeli a középre igazítást a transform: translate(-50%, -50%)-vel.
+    // Nem teszünk ide fix eltolásokat (pl. index * 2px), mert az csak fix felbontáson jó.
+
     document.getElementById('board-wrapper').appendChild(pin);
     return pin;
 }

@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    overflow: hidden; /* Prevent double scrollbars */
+    overflow: hidden; 
 }
 
 /* Modal Styles (Setup & Popups) - Változatlan */
@@ -58,8 +58,8 @@ body {
 /* Game Board Area */
 #game-container {
     width: 100vw;
-    height: 80vh; /* Leave space for controls */
-    overflow: auto;
+    height: 80vh; 
+    overflow: auto; /* Engedélyezi a görgetést, ha a tábla nagyobb lesz */
     display: flex;
     justify-content: center;
     background-color: #333;
@@ -67,38 +67,35 @@ body {
 
 #board-wrapper {
     position: relative;
-    /* --- JAVÍTÁS INDUL --- */
-    width: 100%; /* Engedjük, hogy a #game-containerben elérje a max szélességet */
-    max-width: 1000px; /* Állítsunk be egy ésszerű maximumot, pl. 1000px */
     
-    /* 1. KÉPARÁNY RÖGZÍTÉSE (555/1024 ≈ 54.2%) */
+    width: 100%; 
+    /* --- JAVÍTOTT RÉSZ: MAXIMÁLIS SZÉLESSÉG NÖVELÉSE --- */
+    max-width: 1500px; /* Növelve 1200px-ről 1500px-re (vagy állítsa 100%-ra, ha teljesen ki akarja tölteni a konténert) */
+    /* --- JAVÍTÁS VÉGE --- */
+    
     padding-bottom: 54.2%; 
     height: 0;
-    /* --- JAVÍTÁS VÉGE --- */
+    
+    background-image: url('board.jpg'); /* Győződjön meg róla, hogy ez a helyes fájlnév! */
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #board-img {
-    /* 2. Kép kinyújtása a konténerre (legyen abszolút pozíció, hogy kitöltse a "padding hack" által létrehozott teret) */
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%; 
-    height: 100%;
-    max-width: none; /* Felülírjuk az eredeti max-width: 100% korlátozást */
-    min-width: 0; /* Megszüntetjük a min-width korlátozást */
+    display: none; /* A háttérkép használata miatt ezt elrejtjük */
 }
 
-/* Players (Pins) - Változatlan, a transform: translate(-50%, -50%) továbbra is kulcsfontosságú */
+/* Players (Pins) - Változatlan */
 .player-pin {
     position: absolute;
-    width: 3%; /* Relative to board size */
-    height: 4%;
+    width: 1.8%; /* Kisebb méret, 3%-ról csökkentve */
+    height: 3.3%; /* Arányosan csökkentve */
     border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    border: 1px solid white; /* Vékonyabb keret */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
     transition: top 0.5s ease, left 0.5s ease;
-    transform: translate(-50%, -50%); /* Center pin on coordinate */
+    transform: translate(-50%, -50%); /* Középre igazítás (ez helyes) */
     z-index: 10;
 }
 
