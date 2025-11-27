@@ -19,31 +19,31 @@ const coordinates = [
     { top: 69, left: 85 }, // 13
     { top: 62, left: 86.5 }, // 14
     { top: 55, left: 85 }, // 15 (Csúszda le)
-    { top: 48, left: 81 }, // 16
-    { top: 41, left: 76 }, // 17
-    { top: 34, left: 70 }, // 18
-    { top: 34, left: 64 }, // 19
-    { top: 34, left: 58 }, // 20
-    { top: 34, left: 52 }, // 21 
-    { top: 34, left: 46 }, // 22 
-    { top: 34, left: 40 }, // 23
-    { top: 34, left: 34 }, // 24
-    { top: 34, left: 28 }, // 25
-    { top: 34, left: 22 }, // 26
-    { top: 34, left: 16 }, // 27
-    { top: 34, left: 10 }, // 28
+    { top: 50, left: 84 }, // 16
+    { top: 48, left: 81 }, // 17
+    { top: 48, left: 76 }, // 18
+    { top: 48, left: 70 }, // 19
+    { top: 48, left: 63 }, // 20
+    { top: 48, left: 57 }, // 21 
+    { top: 48, left: 51 }, // 22 
+    { top: 48, left: 44 }, // 23
+    { top: 48, left: 37 }, // 24
+    { top: 48, left: 30 }, // 25
+    { top: 48, left: 24 }, // 26
+    { top: 48, left: 17 }, // 27
+    { top: 46, left: 10 }, // 28
     { top: 27, left: 7 },  // 29
-    { top: 11, left: 10 }, // 30
-    { top: 11, left: 16 }, // 31
-    { top: 11, left: 22 }, // 32
-    { top: 11, left: 28 }, // 33
-    { top: 11, left: 34 }, // 34 
-    { top: 11, left: 40 }, // 35
-    { top: 11, left: 46 }, // 36
-    { top: 11, left: 52 }, // 37
-    { top: 11, left: 58 }, // 38
-    { top: 11, left: 64 }, // 39
-    { top: 11, left: 70 }  // 40 (Cél)
+    { top: 25, left: 10 }, // 30
+    { top: 25, left: 17 }, // 31
+    { top: 25, left: 24 }, // 32
+    { top: 25, left: 30 }, // 33
+    { top: 25, left: 37 }, // 34 
+    { top: 25, left: 44 }, // 35
+    { top: 25, left: 51 }, // 36
+    { top: 25, left: 57 }, // 37
+    { top: 25, left: 63 }, // 38
+    { top: 25, left: 70 }, // 39
+    { top: 25, left: 76 }  // 40 (Cél)
 ];
 
 // Szabályok és szövegek (A csatolt leírás alapján)
