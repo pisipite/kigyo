@@ -6,7 +6,7 @@ body {
     overflow: hidden; /* Prevent double scrollbars */
 }
 
-/* Modal Styles (Setup & Popups) */
+/* Modal Styles (Setup & Popups) - Változatlan */
 .modal {
     display: none;
     position: fixed;
@@ -67,19 +67,29 @@ body {
 
 #board-wrapper {
     position: relative;
-    /* Maintain aspect ratio based on image */
-    max-width: 100%;
+    /* --- JAVÍTÁS INDUL --- */
+    width: 100%; /* Engedjük, hogy a #game-containerben elérje a max szélességet */
+    max-width: 1000px; /* Állítsunk be egy ésszerű maximumot, pl. 1000px */
+    
+    /* 1. KÉPARÁNY RÖGZÍTÉSE (555/1024 ≈ 54.2%) */
+    padding-bottom: 54.2%; 
+    height: 0;
+    /* --- JAVÍTÁS VÉGE --- */
 }
 
 #board-img {
+    /* 2. Kép kinyújtása a konténerre (legyen abszolút pozíció, hogy kitöltse a "padding hack" által létrehozott teret) */
+    position: absolute;
+    top: 0;
+    left: 0;
     display: block;
-    max-width: 100%;
-    height: auto;
-    /* Adjust this width if you want the board to be scrollable horizontally on mobile */
-    min-width: 800px; 
+    width: 100%; 
+    height: 100%;
+    max-width: none; /* Felülírjuk az eredeti max-width: 100% korlátozást */
+    min-width: 0; /* Megszüntetjük a min-width korlátozást */
 }
 
-/* Players (Pins) */
+/* Players (Pins) - Változatlan, a transform: translate(-50%, -50%) továbbra is kulcsfontosságú */
 .player-pin {
     position: absolute;
     width: 3%; /* Relative to board size */
@@ -92,7 +102,7 @@ body {
     z-index: 10;
 }
 
-/* Controls Area */
+/* Controls Area - Változatlan */
 #controls {
     height: 20vh;
     background-color: #222;
