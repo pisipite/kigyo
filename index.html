@@ -19,11 +19,13 @@
         </div>
     </div>
 
-    <div id="game-container">
-        <div id="board-wrapper">
-            <img src="board.jpg" alt="Játéktábla" id="board-img">
+<div id="game-container">
+    <div id="board-wrapper">
+        <div id="info-points-container">
             </div>
+        
     </div>
+</div>
 
     <div id="controls">
         <div id="current-player-info">Játékos info...</div>
@@ -38,7 +40,14 @@
             <button onclick="closeModal()">Rendben</button>
         </div>
     </div>
-
+    <div id="info-modal" class="modal info-popup">
+    <div class="modal-content">
+        <h3 id="info-modal-title"></h3>
+        <p id="info-modal-text"></p>
+        <a id="info-modal-link" href="#" target="_blank" class="info-link">Cikkek a K-Monitor Adatbázisban</a>
+        <button onclick="closeInfoModal()">Bezárás</button>
+    </div>
+    </div>
     <div id="winner-modal" class="modal">
         <div class="modal-content">
             <h2 id="winner-name">Győztes!</h2>

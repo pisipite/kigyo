@@ -43,7 +43,7 @@ body {
 .modal-content button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #d32f2f;
+    background-color: #C03B1A;
     color: white;
     border: none;
     cursor: pointer;
@@ -52,7 +52,7 @@ body {
 }
 
 .modal-content button:hover {
-    background-color: #b71c1c;
+    background-color: #C03B1A;
 }
 
 /* Game Board Area */
@@ -137,3 +137,52 @@ body {
     box-shadow: 0 2px #2e7d32;
     transform: translateY(2px);
 }
+
+/* --- Infopontok (nem a játéksorhoz tartoznak) --- */
+
+.info-point {
+    position: absolute;
+    width: 2.5%; /* Méret a tábla szélességéhez viszonyítva */
+    height: 4.5%;
+    border-radius: 50%;
+    
+    /* JAVÍTÁS: Állítsuk be alapból halványan láthatóra */
+    background-color: rgba(255, 255, 255, 0.5); /* Halvány, áttetsző fehér háttér */
+    border: 1px solid rgba(3, 99, 160, 0.55); /* Halvány, áttetsző szegély */
+    
+    cursor: pointer;
+    z-index: 5; 
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    transform: translate(-50%, -50%); 
+}
+
+/* A HOVER hatás erősebbé teszi a felvillanást */
+.info-point:hover {
+    background-color: rgba(255, 255, 255, 0.65); /* Erősebb fehér háttér */
+    border: 1px solid rgba(3, 99, 160, 0.8); /* Erősebb fehér szegély */
+}
+
+/* --- Infópapup Stílus (meglévő modal-content kiegészítése) --- */
+
+.info-popup .modal-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.info-popup h3 {
+    color: #C03B1A;
+    margin-top: 0;
+}
+
+.info-link {
+    display: block;
+    margin-top: 15px;
+    color: #0363A0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-link:hover {
+    text-decoration: underline;
+}
+
