@@ -51,78 +51,93 @@ const coordinates = [
 const rules = {
     4: {
         title: "A csapatodat megbízzák egy lakás felújításával",
-        text: "Lépj előre egy mezőt! (Irány az 5-ös mező)",
-        target: 5 // Létra fel
+        text: "Lépj előre egy mezőt!",
+        target: 5, // Létra fel,
+        buttonText: "Irány az 5-ös mező!"
     },
     8: {
         title: "Nem adsz számlát",
-        text: "(Irány a 10-es mező)",
-        target: 10 // Létra fel
+        text: "",
+        target: 10, // Létra fel
+        buttonText: "Irány a 10-es mező!"
     },
     10: {
         title: "Az önkormányzati pályázaton politikai kapcsolataid révén sikeresen elnyered a hirdetett lakást egy rászoruló család helyett.",
-        text: "szberény városa egy frekventált helyen lévő, 85 négyzetméteres, két és fél szobás önkormányzati bérlakást tartott fenn... (Irány a 17-es mező)", 
-        target: 17
+        text: "Jászberény városa egy frekventált helyen lévő, 85 négyzetméteres, két és fél szobás önkormányzati bérlakást tartott fenn, hogy egy „motivációs csomag” keretében szakembereket csábítson a városba. A lakáspályázatra ketten jelentkeztek, egyikük a helyi kórház háromgyerekes dolgozója, másikuk pedig a város polgármestere: az ötéves bérleti jogot a polgármester nyerte el.", 
+        target: 17,
+        buttonText: "Irány a 17-es mező!"
     },
     19: {
         title: "Bezárják a gyárat ahol dolgozol.",
-        text: "(Irány a 10-es mező)",
-        target: 10 // Csúszda le
+        text: "",
+        target: 10,
+        buttonText: "Irány a 10-es mező!" // Csúszda le
     },
     20: {
         title: "Kormánypárti politikusként családod nagy földeket vásárolhat a földárverésen.",
-        text: "Az állami tulajdonú földterületek értékesítésének deklarált célja a Nemzeti Földalap vagyoni körébe tartozó 3 hektár feletti földek árveréssel történő értékesítése volt... (Irány a 37-es mező)",   
-        target: 37
+        text: "Az állami tulajdonú földterületek értékesítésének deklarált célja a Nemzeti Földalap vagyoni körébe tartozó, 3 hektár feletti földek árveréssel történő értékesítése volt helyi gazdák számára. A program megkezdése után nyilvánvalóvá vált, hogy sok helyen Fidesz-közeli üzletemberek váltak földtulajdonossá, ami arra enged következtetni, hogy nem a helyi gazdák tulajdonosi helyzetbe hozása, hanem a párt klientúrájának további erősödése volt a cél. Mészáros Lőrinc és családja ezer hektárnál is több földhöz jutott, de más kormánypárti politikusok és rokonaik is bevásároltak a privatizált állami földekből.",   
+        target: 37,
+        buttonText: "Irány a 37-es mező!"
     },
     21: {
         title: "A civil szervezetre, ahol dolgozol, rászáll a KEHI (Kormányzati Ellenőrzési Hivatal) ",
-        text: "2014 tavaszán a Kehi a Miniszterelnökség utasítására kezdte el a Norvég Alap által támogatott szervezetek vizsgálatát... (Irány a 7-es mező)",
-        target: 7 // Csúszda le
+        text: "2014 tavaszán a KEHI a Miniszterelnökség utasítására kezdte el a Norvég Alap által támogatott szervezetek vizsgálatát, melynek végén több szervezetet feljelentett. A lezárult ügyészségi vizsgálat csupán adminisztrációs hibákat tárt fel a norvég pénzeket felhasználóknál. Később kiderült, a vizsgálatot személyesen Orbán Viktor miniszterelnök kezdeményezte.",
+        target: 7,
+        buttonText: "Irány a 7-es mező!" // Csúszda le
     },
     23: {
         title: "A cégeddel kivételeznek a NAV-nál. ",
-        text: "Horváth András, ex-adóellenőr 2013 novemberében robbantotta ki a botrányt azzal, hogy azt állította: a NAV-nál kivételezett helyzetben tartanak egy jól körülhatárolható adózói kört... (Irány a 36-os mező)",
-        target: 36 
+        text: "Horváth András, ex-adóellenőr 2013 novemberében robbantotta ki a botrányt azzal, hogy azt állította: a NAV-nál kivételezett helyzetben tartanak egy jól körülhatárolható adózói kört, amelynek tagjai döntően a kiemelt adózók közül kerülnek ki. Horváth számításai szerint az összes csalásból származó kár elérheti az 1700 milliárd forintot. A rendőrség állásfoglalása szerint egy kivétellel nem történt semmiféle bűncselekmény a feldobott ügyekben. 2017 januárjában Horváth Andrást gyanúsítottként idézték be az ellene, illetéktelen adóhatósági adatokhoz jutás miatt indult eljárásban.",
+        target: 36,
+        buttonText: "Irány a 36-os mező!" 
     },
     24: {
         title: "Devizahitelt vettél fel a házatokra.",
         text: "A dohányzás visszaszorítása ürügyén újraosztják a piacot, de te kimaradsz. Visszacsúszol! (Irány a 6-os mező)",
-        target: 6
+        target: 6,
+        buttonText: "Irány a 6-os mező!"
     },
     25: {
         title: "Múzeumigazgatóként áron alul képeket adsz kölcsön az állami gyűjteményből egy kormányközeli tanácsadó magánlakásába. ",
-        text: "2015. februárjában a Szépművészeti Múzeumból 10 értékes, antik festményt kölcsönöztek abba a Szerb utca 9-ben lévő lakásba... (Irány a 33-as mező)",
-        target: 33 
+        text: "2015 februárjában a Szépművészeti Múzeumból 10 értékes, antik festményt kölcsönöztek abba a Szerb utca 9-ben lévő lakásba, ahol a hírek szerint Habony Árpád volt anyósa bérel, és ahol a tanácsadó is él. A 300 milliót érő műkincseket képenként havi nettó 15 ezer forintért kölcsönözte a Habonyhoz több szálon kötődő cég. A múzeum igazgatója, Baán László Habony esküvői tanúja, a ceremóniára a tanácsadó ingyen kapott termet a Szépművészetiben. A gyanús képkölcsönzések után nyomozó Átlátszó adatigényléséért hatszázezer forintot kértek, végül azonban ezt a többletmunkát Baán László döntésére „magukra vállalták”.",
+        target: 33,
+        buttonText: "Irány a 33-as mező!" 
     },
     26: {
         title: "Magas állami pozícióban felhalmozott tudásodat az üzleti szférában hasznosítod.",
-        text: "A forgóajtó jelenség arra mutat rá, amikor egyes ágazatokon belül, általában vezető beosztású munkatársak, az állami-, illetve az ahhoz kapcsolódó magánszektor között váltanak munkahelyet... (Irány a 32-es mező)",
-        target: 32 
+        text: "A forgóajtó jelenség arra mutat rá, amikor egyes ágazatokon belül, általában vezető beosztású munkatársak az állami-, illetve az ahhoz kapcsolódó magánszektor között váltanak munkahelyet (például honvédelmi minisztérium – fegyvergyártás). Annak ellenére, hogy az üzleti életben léteznek összeférhetetlenségi szabályok az ágazaton belüli munkahelyváltásra, az állami szférában ez nem igazán elterjedt. Jó néhány olyan eset vált ismertté, amikor egy állami vagy önkormányzati intézmény vezetője valamilyen módon az állami érdekek vagy a racionális gazdálkodás rovására kedvező helyzetet teremtett egy magánvállalat számára (például kedvező törvényi szabályozás, előnyös privatizációs szerződések), majd átigazolt az érintett vállalat vezetőségébe. A forgóajtó jelenség itt nem ér véget, ugyanis számos vállalatvezető néhány év leteltével az üzleti életben is tapasztalatot szerzett szakemberként ismét visszatér az állami szférába.",
+        target: 32,
+        buttonText: "Irány a 32-es mező!"
     },    
     27: {
         title: "Céged a Dagály-törvény értelmében sok középítkezés kivitelezésére kap meghívást a vizes vb-n.",
-        text: "Számításaink szerint a FINA 2017 vízes világbajnokság budapesti megrendezésének költsége végül elérte a 140 milliárd forintot... (Irány a 31-es mező)",
-        target: 31 
+        text: "Számításaink szerint a FINA 2017 vizes világbajnokság budapesti megrendezésének költsége végül elérte a 140 milliárd forintot. A tisztánlátást nehezíti, hogy a kormány tucatnyi jogszabályba dugta el a finanszírozás különböző tételeit, arról nem készült átlátható kimutatás. A 2021-ről 2017-re előrehozott rendezésre hivatkozva a Dagály-törvény lehetőséget ad minden kapcsolódó közbeszerzés meghívásos alapon történő lefolytatására. A tenderek eredménye azt mutatja, hogy sok esetben a kormányzattal jó viszonyt ápoló, az utóbbi években közbeszerzéseket halmozó cégek nyerték el a megvalósítás jogát.",
+        target: 31,
+        buttonText: "Irány a 31-es mező!" 
     },
     32: {
         title: "Bírósági perbe keveredsz az indokolatlanul nagy végkielégítésed miatt.",
-        text: "A BKV-ügy a 2009 nyarán kirobbant... A BKV-per néven elhíresült eljárás Hagyó Miklós és vádlott társai ellen zajlik... (Irány a 26-os mező)",
-        target: 26 
+        text: "A „BKV-ügy” a 2009 nyarán kirobbant, a BKV túlzott végkielégítési, valamint a korábbi, a cég számára állítólagosan aránytalanul hátrányos szerződéskötések körüli botránysorozat, mely oda vezetett, hogy az MSZP budapesti elnöksége felkérte Hagyó Miklóst és Horváth Csabát, hogy november 20-áig mondjanak le főpolgármester-helyettesi tisztségükről. A BKV-per néven elhíresült eljárás Hagyó Miklós és vádlott társai ellen zajlik. A per eddigi legnagyobb eseménye Balogh Zsolt vallomásának visszavonása volt, amely az egyetlen bizonyíték volt a Nokia-doboz korrupciós ügyre: Balogh Zsolt, a BKV volt vezérigazgatója a Magyar Nemzetnek azt nyilatkozta, hogy telefondobozban adott át 15 millió forint készpénzt Budapest MSZP-s főpolgármester-helyettesének, Hagyó Miklósnak, és azóta tudja, hogy ennyi pénz éppen belefér egy Nokia-dobozba.",
+        target: 26,
+        buttonText: "Irány a 26-os mező!" 
     },
     33: {
         title: "Nem írtad bele a vagyonnyilatkozatodba egy tulajdonodat, amiről posztoltál a facebookon, így lebuktál.",
-        text: "Áprilisban a DK-s Varju László a Facebook falára posztolta a taksonyi Zöld Sziget Panziót... (Irány a 25-ös mező)",
-        target: 25 
+        text: "Áprilisban a DK-s Varju László a Facebook falára posztolta a taksonyi Zöld Sziget Panziót, melyben az ismerőseinek ajánlotta a szolgáltatást. A képen egy medence, napágyak és mögötte felsorakozó kis faházak voltak láthatók. Az ügyet Lamperth Mónika ex-MSZP-s belügyminiszter kommentje robbantotta ki: „Lacikám, nem láttam a vagyonbevallásodban ezt a kis pecót. :)” A sztorit elsőként a Direkt36 írta meg.",
+        target: 25 ,
+        buttonText: "Irány a 25-ös mező!"
     },
     34: {
         title: "Összekülönbözöl a miniszterelnökkel, céged nem nyer többet közbeszezéseken. ",
-        text: "A 2014-es választások után Simicska Lajos vállalkozó kapcsolata a kormánnyal erősen megromlott... (Irány a 23-as mező)",
-        target: 23 
+        text: "A 2014-es választások után Simicska Lajos vállalkozó kapcsolata a kormánnyal erősen megromlott, végül az 5%-os reklámadó terve robbantotta ki a háborút a miniszterelnök és egykori eminenciása között. 2015 februárjában Simicska, az akkori legnagyobb jobboldali médiatulajdonos, akiről sokáig képet sem készíthetett a sajtó, élő adásban ment neki korábbi munkatársainak és a kormányfőnek, „totális médiaháborút” ígért a Fidesz ellen. Ezek után Simicska cégei sorra veszítették el kivételezett helyzetüket. A plakátháborúként elhíresült esemény során a Simicska kézben lévő Mahir Cityposter Kft. hirdetőoszlopainak lebontásába kezdett a főváros, melyet végül a vállalkozó jogi úton akadályozott meg. Míg Simicska reklámcégéből származó osztaléka az Index szerint 2014-ben több mint 3 milliárd forint volt, addig 2015-re ez 670 millió forintra csökkent a kormányzati reklámok elapadásával. Simicska Lajos kénytelen volt ellehetetlenítése után számos céget eladni, az ingyenesen terjesztett Metropol napilapot is. A felsorolt eseményeket követően az Orbán–Simicska háború több színtéren is folytatódik.",
+        target: 23 ,
+        buttonText: "Irány a 23-as mező!"
     },
     35: {
         title: "Kományváltás",
-        text: "A felmérések szerint romlott a népszerűséged. Visszacsúszol! (Irány a 21-es mező)",
-        target: 21 
+        text: "",
+        target: 21 ,
+        buttonText: "Irány a 21-es mező!"
     }
     // ...
 };
@@ -368,13 +383,23 @@ function checkTile(player) {
     }
 }
 
-function showPopup(rule, rolledSix) {
+function showPopup(rule) {
     document.getElementById('modal-title').innerText = rule.title;
     document.getElementById('modal-text').innerText = rule.text;
     document.getElementById('action-modal').classList.add('active');
     
-    pendingMove = rule.target;
-    pendingRolledSix = rolledSix; 
+    // ÚJ: Gomb szövegének beállítása
+    const modalButton = document.querySelector('#action-modal .modal-content button');
+    
+    if (rule.target !== null) {
+        // Ha van célmező (létra/csúszda), használjuk az egyedi szöveget.
+        modalButton.innerText = rule.buttonText || "Rendben"; 
+        pendingMove = rule.target;
+    } else {
+        // Ha nincs célmező (pl. győzelem), az alapértelmezett/győzelmi szöveg jelenik meg.
+        modalButton.innerText = "Új játék indítása"; 
+        pendingMove = null;
+    }
 }
 
 function closeModal() {
